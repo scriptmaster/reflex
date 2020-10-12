@@ -3,17 +3,10 @@ package main
 import "regexp"
 
 var defaultExcludes = []string{
-	// VCS dirs
-	`(^|/)\.git/`,
-	`(^|/)\.hg/`,
+	// Simple ignore all . dirs
+	`(^|/)\..*`,
 	// Vim
 	`~$`,
-	`\.swp$`,
-	// Emacs
-	`\.#`,
-	`(^|/)#.*#$`,
-	// OS X
-	`(^|/)\.DS_Store$`,
 }
 
 var defaultExcludeMatcher multiMatcher
